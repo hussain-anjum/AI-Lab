@@ -4,3 +4,188 @@ Act as a strict coding assistant for an Artificial Intelligence Lab. I will prov
 2. A section clearly showing the exact test Query or Function Call (Input) to run in the console/REPL, followed by the Expected Output.
 
 Do not add any other text, breakdown, or preamble before or after the code. Waiting for my first problem.
+
+
+
+
+
+
+**১. Factorial (factorial.pl)**
+এখানে আমরা ৫ এর ফ্যাক্টোরিয়াল বের করতে চাচ্ছি।
+
+* **Input (Query):**
+```prolog
+?- fact(5, Result).
+
+```
+
+
+* **Expected Output:**
+```prolog
+Result = 120 .
+
+```
+
+
+
+**২. Fibonacci (fibonacci.pl)**
+এখানে ফিবোনাচি সিরিজের ৬ষ্ঠ সংখ্যাটি বের করা হচ্ছে।
+
+* **Input (Query):**
+```prolog
+?- fib(6, Result).
+
+```
+
+
+* **Expected Output:**
+```prolog
+Result = 8 .
+
+```
+
+
+
+**৩. GCD and LCM (gcd_lcm.pl)**
+১২ এবং ১৮ এর গসাগু (GCD) এবং লসাগু (LCM) বের করার নিয়ম।
+
+* **Input (Query) - GCD:**
+```prolog
+?- gcd(12, 18, D).
+
+```
+
+
+* **Expected Output:**
+```prolog
+D = 6 .
+
+```
+
+
+* **Input (Query) - LCM:**
+```prolog
+?- lcm(12, 18, M).
+
+```
+
+
+* **Expected Output:**
+```prolog
+M = 36 .
+
+```
+
+
+
+**৪. Cube of a number (cube.pl)**
+এটি একটি ইন্টারেক্টিভ প্রোগ্রাম। `cube.` লিখে কল করলে এটি ইউজারের কাছে ইনপুট চাইবে। (ইনপুটের শেষে অবশ্যই `.` দিতে হবে)।
+
+* **Input (Query):**
+```prolog
+?- cube.
+
+```
+
+
+* **Interactive Input & Output:**
+```text
+Enter number: 3.
+Cube of 3 is 27
+Enter number: stop.
+true.
+
+```
+
+
+
+**৫. Delete List (delete_list.pl)**
+একটি লিস্ট `[1, 2, 3, 4]` থেকে `3` ডিলিট করার নিয়ম।
+
+* **Input (Query):**
+```prolog
+?- list_delete(3, [1, 2, 3, 4], Result).
+
+```
+
+
+* **Expected Output:**
+```prolog
+Result = [1, 2, 4] .
+
+```
+
+
+
+**৬. Insert List (insert_list.pl)**
+তোমার কোডের লজিক অনুযায়ী, `[1, 2, 4]` লিস্টের বিভিন্ন পজিশনে `3` ইনসার্ট করা।
+
+* **Input (Query):**
+```prolog
+?- list_insert(3, [1, 2, 4], Result).
+
+```
+
+
+* **Expected Output:**
+```prolog
+Result = [3, 1, 2, 4] ;
+
+```
+
+
+*(নোট: প্রথম রেজাল্ট আসার পর সেমিকোলন `;` চাপলে লিস্টের অন্য পজিশনে ৩ ইনসার্ট হয়ে আরও রেজাল্ট দেখাবে)*
+
+**৭. Bubble Sort (bubblesort.pl)**
+এলোমেলো নাম্বারের লিস্টকে ছোট থেকে বড় সাজানো।
+
+* **Input (Query):**
+```prolog
+?- bubblesort([5, 3, 8, 1, 2], Sorted).
+
+```
+
+
+* **Expected Output:**
+```prolog
+3 5 1 2 8 
+1 3 2 5 8 
+1 2 3 5 8 
+Sorted = [1, 2, 3, 5, 8] .
+
+```
+
+
+
+**৮. File Handling (file_handle.pl)**
+ফাইল তৈরি করা এবং রিড-রাইট করা।
+
+* **Input (Query) - Write:** (এটি `mfile.txt` নামে একটি ফাইল তৈরি করে তাতে ডেটা লিখবে)
+```prolog
+?- writeinfile.
+
+```
+
+
+* **Expected Output:**
+```prolog
+true.
+
+```
+
+
+* **Input (Query) - Read/Write:** (এটি `mfile.txt` থেকে পড়ে `outfile.txt` এ কপি করবে)
+```prolog
+?- readfromfile('mfile.txt', 'outfile.txt').
+
+```
+
+
+* **Expected Output:**
+```prolog
+start
+123
+hello
+true.
+
+```
