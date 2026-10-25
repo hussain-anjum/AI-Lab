@@ -1,10 +1,7 @@
-cube :-
-    write('Enter number: '),
-    read(X),
-    process(X).
+cube(N, C) :-
+    C is N * N * N.
 
-process(stop) :- !.
-process(N) :-
-    C is N * N * N,
-    write('Cube of '), write(N), write(' is '), write(C), nl,
-    cube.
+run :-
+    write('Enter a number: '), read(N),
+    cube(N, C),
+    write('Cube of '), write(N), write(' = '), write(C), nl.
